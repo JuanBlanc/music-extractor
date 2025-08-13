@@ -1,0 +1,12 @@
+services:
+  django:
+    build: .
+    container_name: music-extractor
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./media:/app/media
+    environment:
+      - DJANGO_SETTINGS_MODULE=musicExtractor.settings
+    restart: unless-stopped
