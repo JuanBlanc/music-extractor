@@ -1,0 +1,25 @@
+meta {
+  name: extractor audio
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/extract-audio/
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "url": "https://www.youtube.com/watch?v=W0DM5lcj6mw&list=PLzT2uQiL5epCb1wbFvoh92HpVV27GmzGn&index=169"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
