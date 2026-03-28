@@ -1,0 +1,19 @@
+meta {
+  name: ver job
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://127.0.0.1:8000/jobs/{{job_id}}/
+  body: none
+  auth: inherit
+}
+
+vars:pre-request {
+  job_id: 00000000-0000-0000-0000-000000000000
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: playlist
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:8000/extract-audio/
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "url": "https://www.youtube.com/playlist?list=PLzT2uQiL5epCb1wbFvoh92HpVV27GmzGn"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
